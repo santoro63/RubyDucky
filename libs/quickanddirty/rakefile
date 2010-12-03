@@ -1,0 +1,7 @@
+BASE_DIR=File.dirname(__FILE__)
+
+task :test do
+  TEST_DIR = BASE_DIR + "/test"
+  puts `ruby #{TEST_DIR}/*.rb`
+end
+

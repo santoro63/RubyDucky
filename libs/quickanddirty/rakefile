@@ -1,7 +1,14 @@
 BASE_DIR=File.dirname(__FILE__)
+SRC_DIR="#{BASE_DIR}/src"
+TEST_DIR="#{BASE_DIR}/test"
+INSTALL_DIR="~/Libs/ruby"
+
 
 task :test do
-  TEST_DIR = BASE_DIR + "/test"
   puts `ruby #{TEST_DIR}/*.rb`
 end
 
+task :install do
+  puts `cp --update  #{SRC_DIR}/*.rb #{INSTALL_DIR}`
+end
+  

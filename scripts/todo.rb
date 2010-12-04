@@ -119,7 +119,7 @@ COLORS = { "background.OPEN" => "gray80", "foreground.OPEN" => "black",
            "background.WORKING" => "gray70", "foreground.WORKING" => "white",
            "background.CLOSED" => "gray30", "foreground.CLOSED" => "white" }
     
-File.exist?(LOCK_FILE) and (! opts.get("f")) and abort("an instance is already running.")
+File.exist?(LOCK_FILE) and (! opts["f"]) and abort("an instance is already running.")
 FileUtils.touch(LOCK_FILE)
 
 # loads configuration file
